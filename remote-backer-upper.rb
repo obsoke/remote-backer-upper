@@ -35,7 +35,7 @@ Net::SSH.start(@config["host"], @config["user_name"], options) do |ssh|
   # creating a tar of backup folder
   ssh.exec!("tar -pczf #{bkup_name}.tar #{bkup_name}/")
   # copy folder back to localhost
-  ssh.scp.download!("~/#{bkup_name}.tar", @config["destination_folder"])
+  ssh.scp.download!("#{bkup_name}.tar", @config["destination_folder"])
   # clean up files and folders on remote host
   ssh.exec!("rm -r #{bkup_name} && rm #{bkup_name}.tar") 
 end

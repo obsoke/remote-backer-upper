@@ -4,6 +4,7 @@ host: "remote.mysite.com"
 user_name: "yourusername"
 password: "yourpassword"
 
+# note: for some reason, relative-to-home paths don't work
 destination_folder: /perhaps/a/path/to/your/dropbox/folder
 
 folders: # remote folders to back up
