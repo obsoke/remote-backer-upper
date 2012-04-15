@@ -16,7 +16,8 @@ USAGE:
 
 THINGS I'D LIKE TO ADD IN THE FUTURE:
 - Add option to use SSH keys to login to remote server
-- More backup options
+- Limit amount of backups kept in destination folder
+- Add gzip compression to tar archive
 
 LICENSE:
 None. Use this however you wish and at your own discretion.
