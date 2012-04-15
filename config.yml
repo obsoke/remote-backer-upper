@@ -1,0 +1,19 @@
+---
+# ssh login info
+host: "remote.mysite.com"
+user_name: "yourusername"
+password: "yourpassword"
+
+destination_folder: /perhaps/a/path/to/your/dropbox/folder
+
+folders: # remote folders to back up
+  - /srv/www
+  - /home/myuser/secret_folder
+
+databases: # remote databases to back up
+  - db_name: wordpress_db
+    user_name: sql_username
+    password: sql_password
+  - db_name: wiki_db
+    user_name: sql_username
+    password: sql_password

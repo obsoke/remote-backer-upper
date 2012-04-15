@@ -1,0 +1,22 @@
+REMOTE-BACKER-UPPER
+
+This is a simple script I wrote in order to back up the files and
+databases on my VPS. 
+
+This script has only been tested with Ruby 1.9.3.
+
+REQUIREMENTS:
+- net/ssh gem
+- net/scp gem
+
+USAGE:
+1) Clone repo or download it as an archive through github.
+2) Edit the config.yml file.
+3) Run the script.
+
+THINGS I'D LIKE TO ADD IN THE FUTURE:
+- Add option to use SSH keys to login to remote server
+- More backup options
+
+LICENSE:
+None. Use this however you wish and at your own discretion.
