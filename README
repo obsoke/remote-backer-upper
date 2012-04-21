@@ -1,7 +1,7 @@
 REMOTE-BACKER-UPPER
 
-This is a simple script I wrote in order to back up the files and
-databases on my VPS. 
+This is a simple script I wrote to automate the back up of certain 
+folders and databases on my VPS. 
 
 This script has only been tested with Ruby 1.9.3.
 
