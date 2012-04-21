@@ -14,12 +14,16 @@ bkup_name = Time.now.strftime("%Y-%m-%d_%H-%M_backup")
 begin
   File.open("config.yml") { |file| @config = YAML.load(file) }
 rescue Exception => e
-  puts "Cannot find config.yml"
-  exit
+  raise "Cannot find config.yml"
 end
 options = { # used in Net::SSH.start
   :password => @config["password"]
 }
+
+# ensure destination directory exists
+if File.directory?(@config["destination_folder"]) == false
+  raise "#{@config["destination_folder"]} is not a folder."
+end
 
 # connect to remote host
 begin
@@ -53,7 +57,8 @@ begin
     ssh.exec!("rm -r #{bkup_name} && rm #{bkup_name}.tar") 
   end
 rescue Exception => e
-  print "There was a problem connecting to the remote host: "
-  puts e
-  exit
+  raise "There was a problem connecting to the remote host: #{e}"
 end
+
+# if more than 10 backups exist in destination_folder, delete old ones
+puts system("ls -l #{@config["destination_folder"]}| tail -4 | wc -l")
