@@ -11,7 +11,7 @@ REQUIREMENTS:
 
 USAGE:
 1) Clone repo or download it as an archive through github.
-2) Edit the config.yml file.
+2) Rename 'config.yml.example' to 'config.yml' and edit the file.
 3) Run the script.
 
 THINGS I'D LIKE TO ADD IN THE FUTURE:
